@@ -22,6 +22,7 @@ public class LobbyControl : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
+        Debug.Log("LobbyControl.OnNetworkSpawn()");
         m_ClientsInLobby = new Dictionary<ulong, bool>();
         
         //Always add ourselves to the list at first
@@ -70,6 +71,7 @@ public class LobbyControl : NetworkBehaviour
     /// <summary>
     ///     UpdateAndCheckPlayersInLobby
     ///     Checks to see if we have at least 2 or more people to start
+    ///     Always called from server
     /// </summary>
     private void UpdateAndCheckPlayersInLobby()
     {
@@ -131,7 +133,7 @@ public class LobbyControl : NetworkBehaviour
     /// <param name="clientId"></param>
     /// <param name="isReady"></param>
     [ClientRpc]
-    private void SendClientReadyStatusUpdatesClientRpc(ulong clientId, bool isReady)
+    private void  SendClientReadyStatusUpdatesClientRpc(ulong clientId, bool isReady)
     {
         if (!IsServer)
         {

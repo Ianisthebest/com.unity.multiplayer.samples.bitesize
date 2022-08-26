@@ -2109,6 +2109,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LobbyMenuControl
       objectReference: {fileID: 0}
+    - target: {fileID: 1928838599461109795, guid: 09d984ed5a2be443b9fc70a1a9e25cd9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1928838599461109806, guid: 09d984ed5a2be443b9fc70a1a9e25cd9,
         type: 3}
       propertyPath: LobbyText
@@ -2117,7 +2122,7 @@ PrefabInstance:
     - target: {fileID: 1928838599461109806, guid: 09d984ed5a2be443b9fc70a1a9e25cd9,
         type: 3}
       propertyPath: m_MinimumPlayerCount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1928838599461109807, guid: 09d984ed5a2be443b9fc70a1a9e25cd9,
         type: 3}
